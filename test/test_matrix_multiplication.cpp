@@ -3,6 +3,9 @@
 #include <vector>
 #include <gtest/gtest.h>
 
+// ######################### Source code of multiplyMatrices in src/matrix_mult
+
+
 TEST(MatrixMultiplicationTest, TestMultiplyMatrices) {
     std::vector<std::vector<int>> A = {
         {1, 2, 3},
@@ -22,7 +25,7 @@ TEST(MatrixMultiplicationTest, TestMultiplyMatrices) {
         {139, 154}
     };
 
-    ASSERT_EQ(C, expected) << "Matrix multiplication test failed!";
+    ASSERT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
 }
 
 int main(int argc, char **argv) {
