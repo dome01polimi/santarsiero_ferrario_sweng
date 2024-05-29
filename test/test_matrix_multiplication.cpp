@@ -5,6 +5,20 @@
 
 // ######################### Source code of multiplyMatrices in src/matrix_mult
 
+// @TODOS
+/*
+    1. Basic functional 
+    2. Identity Matrix 
+    3. Zero Matrix
+    4. Dimension mismatch
+    5. Symmetry 
+    6. Associative
+    7. Distributive
+    8. Large Matrix
+
+    All randomized w.r.t a seed
+
+*/
 
 TEST(MatrixMultiplicationTest, TestMultiplyMatrices) {
     std::vector<std::vector<int>> A = {
