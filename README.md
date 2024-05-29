@@ -11,10 +11,9 @@ The implementation to be tested is a matrix multiplication function made
 available as a compiled object code. The function has the following
 signature:
 
-void multiplyMatrices(const std::vector\<std::vector\<int\>\>& A,\
+void multiplyMatrices(const std::vector\<std::vector\<int\>\>& A,
 const std::vector\<std::vector\<int\>\>& B,
-std::vector\<std::vector\<int\>\>& C,\
-int rowsA, int colsA, int colsB);
+std::vector\<std::vector\<int\>\>& C, int rowsA, int colsA, int colsB);
 
 Use the template available here
 <https://github.com/SimoneReale/SE4HPC_project_part1> to create your own
