@@ -34,6 +34,18 @@ std::vector<std::vector<int>> generateRandomMatrix(unsigned rows, unsigned cols,
 }
 
 /**
+    Generate a random number given a generator.
+    @param generator Random number generator
+    @param lower_bound Minimum feasible integer
+    @param upper_bound Maximum feasible integer
+*/
+int generateRandomNumber(std::mt19937& generator, int lower_bound=-100, int upper_bound=100)
+{
+    std::uniform_int_distribution<int> distribution(lower_bound, upper_bound);
+    return distribution(generator);
+}
+
+/**
  * Reference function to check the provided library. 
 */
 void multiplyMatricesWithoutErrors(const std::vector<std::vector<int>> &A,
