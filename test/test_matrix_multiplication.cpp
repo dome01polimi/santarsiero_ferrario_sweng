@@ -1,4 +1,5 @@
 #include "matrix_multiplication.h"
+#include "utils.hpp"
 #include <iostream>
 #include <vector>
 #include <gtest/gtest.h>
@@ -6,20 +7,7 @@
 
 using namespace std;
 
-std::vector<std::vector<int>> generateRandomMatrix(int rows, int cols, std::mt19937& generator)
-{
-    std::vector<std::vector<int>> matrix(rows, std::vector<int>(cols));
-    std::uniform_int_distribution<int> distribution(-100, 100);
 
-    for (int i = 0; i < rows; ++i)
-    {
-        for (int j = 0; j < cols; ++j)
-        {
-            matrix[i][j] = distribution(generator);
-        }
-    }
-    return matrix;
-}
 
 // ######################### Source code of multiplyMatrices in src/matrix_mult
 
@@ -57,6 +45,7 @@ TEST(MatrixMultiplicationTest, TestMultiplyMatrices)
 
     ASSERT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
 }
+
 
 TEST(MatrixMultiplicationTest, TestMultiplyMatrices_ZeroMatrix)
 {
@@ -114,7 +103,7 @@ TEST(MatrixMultiplicationTest, TestMultiplyMatrices_DiagonalMatrix)
     ASSERT_EQ(C, expected) << "Matrix multiplication test failed!";
 }
 
-TEST(MatrixMultiplicationTest, TestGenerateRandomMatrix)
+TEST(UtilsTest, TestGenerateRandomMatrix)
 {
     int rows = 3;
     int cols = 3;
