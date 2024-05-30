@@ -5,6 +5,12 @@
 #include <random>
 
 /**
+ * Note: we're placing the implementation of utils methods in this header file
+ * because thery are very small.  
+*/
+
+
+/**
     Generate a matrix with random numbers given a generator and an interval of feasible integers.
     @param rows Number of rows of the matrix
     @param cols Number of cols of the matrix
@@ -26,6 +32,10 @@ std::vector<std::vector<int>> generateRandomMatrix(unsigned rows, unsigned cols,
     }
     return matrix;
 }
+
+/**
+ * Reference function to check the provided library. 
+*/
 void multiplyMatricesWithoutErrors(const std::vector<std::vector<int>> &A,
                       const std::vector<std::vector<int>> &B,
                       std::vector<std::vector<int>> &C, int rowsA, int colsA,

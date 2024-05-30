@@ -5,8 +5,6 @@
 #include <gtest/gtest.h>
 #include <random>
 
-constexpr int SEED = 42;
-std::mt19937 GENERATOR(SEED);
 // @TODOS
 /*
     1. Basic functional
@@ -19,9 +17,13 @@ std::mt19937 GENERATOR(SEED);
     8. Large Matrix
 
     All randomized w.r.t a seed
+    + Loop over multiple seeds if necessary.
 
 */
 
+
+constexpr int SEED = 42;
+std::mt19937 GENERATOR(SEED);
 /**
  * Basic multiplicaiton with a fixed number of rows and cols
  * 
