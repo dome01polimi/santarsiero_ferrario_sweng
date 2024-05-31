@@ -21,7 +21,7 @@ using namespace std;
 
 // All randomized w.r.t a seed
 
-/*
+
 TEST(MatrixMultiplicationTest, TestMultiplyMatrices)
 {
     std::vector<std::vector<int>> A = {
@@ -41,7 +41,7 @@ TEST(MatrixMultiplicationTest, TestMultiplyMatrices)
 
     ASSERT_EQ(C, expected) << "Matrix multiplication test failed!";
 }
-*/
+
 
 /*
 TOTAL ERRORS : 20
@@ -58,7 +58,7 @@ REMAING ERRORS : 16
     so the loop cycle finishes with value v=20(just for see alghorithm's behaviour) and we check if the results are correct.
 */
 
-/*
+
 TEST(MatrixMultiplicationTest, TestMultiplyMatrices_CostantMatrix)
 {
     const int rows_A = 3;
@@ -104,7 +104,7 @@ TEST(MatrixMultiplicationTest, TestMultiplyMatrices_CostantMatrix)
         EXPECT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
     }
 }
-*/
+
 /*# New Errors discovered : 13
 Error 1: Element-wise multiplication of ones detected!
 Error 2: Matrix A contains the number 7!
@@ -131,7 +131,6 @@ REMAING ERRORS : 3
     (in this test n = 10, so A will contain all the numbers from 1 to 100, but taking into consideration all the previous errors !)
 */
 
-/*
 TEST(MatrixMultiplicationTest, TestMultiplyMatrices_IdentityMatrix)
 {
     const int n = 10; // value of n
@@ -174,6 +173,13 @@ TEST(MatrixMultiplicationTest, TestMultiplyMatrices_IdentityMatrix)
     // If we use ASSERT_EQ, the test will stop at the first error, so we use EXPECT_EQ
     EXPECT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
 }
+/*# New Errors discovered : 3
+Error 7: Result matrix contains a number between 11 and 20!
+Error 15: A row in matrix A is filled entirely with 5s!
+Error 18: Matrix A is a square matrix! 
+REMAING ERRORS : 0
+    We discover all errors :)
+    Now we test a simple muliplication that should not give any error.
 */
 
 TEST(MatrixMultiplicationTest, TestMultiplyMatrices_withoutError)
