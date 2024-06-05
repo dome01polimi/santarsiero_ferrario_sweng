@@ -136,4 +136,3 @@ TEST(SeedMatrixMultiplicationTest, SeedMatrixMultiplication_Diagonal)
     multiplyMatricesWithoutErrors(A, B, expected, a_rows, a_cols, b_cols);
     ASSERT_EQ(C, expected) << "Diagonal Matrix multiplication test failed!";
 }
-
